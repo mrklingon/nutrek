@@ -11,6 +11,8 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     Ship.turn(Direction.Right, 45)
 })
+let newY = 0
+let newX = 0
 let moving = 0
 let Ship: game.LedSprite = null
 let StationPan = images.createBigImage(`
@@ -32,10 +34,32 @@ basic.pause(2000)
 let Starbase = game.createSprite(2, 1)
 Ship = game.createSprite(4, 4)
 moving = 1
+Ship.set(LedSpriteProperty.Direction, 0)
 basic.forever(function () {
     if (moving == 1) {
         Ship.move(1)
-        Ship.ifOnEdgeBounce()
-        basic.pause(100)
+        newX = Ship.get(LedSpriteProperty.X)
+        newY = Ship.get(LedSpriteProperty.Y)
+        if (Ship.isTouchingEdge()) {
+            if (Ship.get(LedSpriteProperty.X) == 0) {
+                newX = 4
+            }
+            if (Ship.get(LedSpriteProperty.X) == 4) {
+                newX = 0
+            }
+            if (Ship.get(LedSpriteProperty.Y) == 4) {
+                newY = 0
+            }
+            if (Ship.get(LedSpriteProperty.Y) == 0) {
+                newY = 4
+            }
+            Ship.set(LedSpriteProperty.X, newX)
+            Ship.set(LedSpriteProperty.Y, newY)
+        }
+        basic.pause(300)
+        if (Ship.isTouching(Starbase)) {
+            moving = 0
+            Station.showImage(0)
+        }
     }
 })
