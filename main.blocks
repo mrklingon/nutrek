@@ -1,0 +1,13 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="OcPyCbJfg/+9b%=*vjqn">StationPan</variable><variable id="5T2}(?XW+7E0a?rI+#N^">myImage</variable><variable id="E$ax=prmoJq2%O{Y?O_}">Station</variable><variable id="{=RMLZ|,!3q@u)ksM!qC">Ship</variable><variable id="0~2AdI[3!KOwwx_ssA+~">Starbase</variable></variables><block type="device_forever" id="rpI]CkgcqZblpZFLrQR]" x="585" y="-424"/><block type="pxt-on-start" id="$4mj`]4Lw/]^X@)V|AB~" x="-12" y="-164"><statement name="HANDLER"><block type="variables_set" id="=8,pSp~5}=x)Aoc(Z^0V"><field name="VAR" id="OcPyCbJfg/+9b%=*vjqn">StationPan</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="device_build_big_image" id="8tUTPRIs+l^iKr:^X6i9"><field name="LEDS">`
+        # . . . . . . # . . 
+        . . . # . . # # # . 
+        . . . . . . # # # . 
+        . . # . . . . # . . 
+        . . . . . . . # . .
+        `</field></block></value><next><block type="variables_set" id="`3$.d;1zaRj)%1_G|R7("><field name="VAR" id="E$ax=prmoJq2%O{Y?O_}">Station</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="device_build_image" id="RQ3jjy,OM!48_hq8p`9m"><field name="LEDS">`
+        . . # . . 
+        . # # # . 
+        . # # # . 
+        . . # . . 
+        . . # . .
+        `</field></block></value><next><block type="device_scroll_image" id="R[Z@Iew%W?|H@YMc@P(k"><value name="sprite"><block type="variables_get" id="mt]^UI:KO?/A@6g(*hcY"><field name="VAR" id="OcPyCbJfg/+9b%=*vjqn">StationPan</field></block></value><value name="frameoffset"><shadow type="math_number" id="]Br7taft!~8@Wqv+^AP)"><field name="NUM">1</field></shadow></value><value name="delay"><shadow type="math_number" id="0AJE,U?-[udFw|pe#p{G"><field name="NUM">200</field></shadow></value><next><block type="device_pause" id="pm26~RNA}0GT00qesT+Q"><value name="pause"><shadow type="timePicker" id="GY:]gI4xhFhm`k@RdADA"><field name="ms">2000</field></shadow></value><next><block type="variables_set" id="Uh9~zJHx-p.w9%e3%^93"><field name="VAR" id="0~2AdI[3!KOwwx_ssA+~">Starbase</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="game_create_sprite" id="y*+ra:DFHr_OgR%,zrGi"><value name="x"><shadow type="math_number" id="S92ykDB%94%f?c!=eCts"><field name="NUM">2</field></shadow></value><value name="y"><shadow type="math_number" id="9T;@bYaGPy#qYj(^pA[("><field name="NUM">1</field></shadow></value></block></value></block></next></block></next></block></next></block></next></block></statement></block></xml>
